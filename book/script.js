@@ -1,5 +1,6 @@
 let highestZ = 1;
 
+
 class Paper {
   holdingPaper = false;
   mouseTouchX = 0;
@@ -79,4 +80,9 @@ const papers = Array.from(document.querySelectorAll('.paper'));
 papers.forEach(paper => {
   const p = new Paper();
   p.init(paper);
+});
+
+document.body.addEventListener('click', function() {
+  var audio = document.getElementById('background-audio');
+  audio.play(); // Mulai memutar audio setelah tindakan pengguna
 });
